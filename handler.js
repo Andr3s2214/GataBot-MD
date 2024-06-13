@@ -1466,7 +1466,7 @@ mentionedJid:[user],
 "externalAdReply": {
 "showAdAttribution": true,
 "renderLargerThumbnail": true,
-"thumbnailUrl": "https://telegra.ph/file/4c4fe6ad5bdef9d562ab4.jpg", 
+"thumbnailUrl": "https://telegra.ph/file/f16ecf8e03d6a064d3cb5.jpg", 
 "title": [wm, '😻 𝗦𝘂𝗽𝗲𝗿 ' + gt + ' 😻', '🌟 centergatabot.gmail.com'].getRandom(),
 "containsAutoReply": true,
 "mediaType": 1, 
