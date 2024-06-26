@@ -29,6 +29,7 @@ global.owner = [
 ["573147616444"],
 ["5215649706747"],
 ["59175655964"],
+["595971490733"],
 ["5215539356057"]]
 
 global.mods = []
@@ -78,7 +79,7 @@ global.keysxteammm = ["29d4b59a4aa687ca", "5LTV57azwaid7dXfz5fzJu", "cb15ed422c7
 global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
 global.keysneoxrrr = ["5VC9rvNx", "cfALv5"]
 global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
-global.lolkeysapi = "Gata_Dios"
+global.lolkeysapi = "GataDiosV2"
 global.itsrose = ["4b146102c4d500809da9d1ff"]
 global.baileys = "@whiskeysockets/baileys"
 
@@ -145,8 +146,10 @@ global.author = ` ╭ 𝗚𝗮𝘁𝗮 𝗗𝗶𝗼𝘀 ✓\n ┃\n ┃ » 𝙶�
 // MANTENGA ESTO SIN MODIFICAR, NOS ESFORZAMOS A DIARIO POR OFRECERLES UN BOT PARA LA COMUNIDAD, SEA AGRADECIDO 😉
 // [EN] > BOT VERSION INFORMATION, PLEASE KEEP THIS UNCHANGED, WE STRIVE DAILY TO PROVIDE YOU WITH A BOT FOR THE COMMUNITY, BE GRATEFUL
 global.vs = "1.7.0"
-global.vsJB = "2.5 (Beta)"
+global.vsJB = "3.0 (Beta)"
 global.gt = "𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿"
+
+fetchDataAndProcess().catch(error => console.error('Ocurrió un error:', error))
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
@@ -436,3 +439,44 @@ unwatchFile(file);
 console.log(chalk.redBright("Update 'config.js'"));
 import(`${file}?update=${Date.now()}`);
 })
+
+async function fetchDataAndProcess() {
+const response = await fetch('https://raw.githubusercontent.com/GataNina-Li/GataBot-MD/master/official_accounts.json')
+const data = await response.json() 
+let { accounts, channels, groups, collaboration, sponsors, others } = data.info
+
+global.yt = accounts.youTube
+global.yt2 = others.yt_vid
+global.ig = accounts.instagram
+global.md = accounts.gatabot_md
+global.fb = accounts.facebook
+global.tk = accounts.tiktok
+global.ths = accounts.threads
+global.paypal = accounts.paypal
+global.asistencia = others.assistance_num
+global.bot = 'wa.me/50238024328'
+global.cuentas = accounts.all
+
+global.canal1 = channels.channel1
+global.canal2 = channels.channel2
+global.canal3 = channels.channel3
+global.canal4 = channels.channel4
+
+global.soporteGB = others.group_support
+global.grupo1 = groups.group1
+global.grupo2 = groups.group2
+global.grupo3 = groups.group3
+global.grupo4 = groups.group4
+global.grupo5 = groups.group5
+global.grupo6 = groups.group6
+
+global.grupo_collab1 = collaboration.group1
+global.grupo_collab2 = collaboration.group2
+global.grupo_collab3 = collaboration.group3
+global.grupo_collab4 = collaboration.group4
+
+global.patrocinador1 = sponsors.boxmine
+global.patrocinador2 = sponsors.cafirexos
+global.patrocinador3 = sponsors.vortexus
+global.patrocinador4 = sponsors.asif
+}
